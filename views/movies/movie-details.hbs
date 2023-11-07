@@ -1,11 +1,11 @@
 
-<h2>{{movieDetails.name}}</h2>
-<p><strong>Gender:</strong> {{movieDetails.genre}}</p>
-<p><strong>Plot:</strong> {{movieDetails.plot}}</p>
+<h2>{{this.movieDetails.title}}</h2>
+<p>Gender: {{this.movieDetails.genre}}</p>
+<p>Plot:{{this.movieDetails.plot}}</p>
 
 <h3>Cast</h3>
 <ul>
-  {{#each movie.cast}}
+  {{#each this.movieDetails.cast}}
     <li>
       <strong>Name:</strong> {{this.name}}<br>
       <strong>Ocuppation:</strong> {{this.occupation}}<br>
