@@ -96,15 +96,14 @@ router.get("/", async (req, res, next)=>{
 
 })
 
-
-// GET "/movies/:id" senseñar una peli en concreto
+// GET "/movies/:id" enseñar una peli en concreto
 router.get("/:id", async (req,res,next)=>{
 
         try {
 
-            const movieDetails = await Movie.findById(req.params.id).populate("cast")
+            const movieDetails = await Movie.findById(req.params.id).populate("title")
 
-            res.render("movies/movie-details", {
+            res.render("movies/movie-details.hbs", {
 
                 movieDetails
 
@@ -123,6 +122,8 @@ router.get("/:id", async (req,res,next)=>{
 
 
 })
+
+
 
 
 
